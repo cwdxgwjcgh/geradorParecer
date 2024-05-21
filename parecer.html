@@ -1,88 +1,313 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Gerador de parecer pedagógico sobre o desempenhos dos alunos." />
-        <meta name="author" content="Uianes Luiz Rockenbach Biondo" />
-        <title>Gerador de parecer</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navegação-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Início</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link disabled" href="#">Login (em construção)</a></li>
-                            <li class="nav-item"><a class="nav-link disabled" href="#">Meus pareceres (em construção)</a></li>
-                        </ul>
-                    </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Gerador de parecer pedagógico sobre o desempenhos dos alunos." />
+    <meta name="author" content="Uianes Luiz Rockenbach Biondo" />
+    <title>Gerador de parecer</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <!-- Navegação-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Início</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link disabled" href="#">Login (em construção)</a></li>
+                        <li class="nav-item"><a class="nav-link disabled" href="#">Meus pareceres (em construção)</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-            <!-- Conteúdo -->
+            </div>
+        </nav>
+        <!-- Conteúdo -->
+        <form id="respostas">
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
                     <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Novo parecer</span></h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <!-- Experience Section-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome do aluno(a) aqui" data-sb-validations="required" />
+                            <label for="name">Nome do aluno(a)</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">É obrigatório informar o nome.</div>
+                        </div>
+                        <!-- Desempenho-->
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-                                <!-- Download resume button-->
-                                <!-- Note: Set the link href target to a PDF file within your project-->
-                                <a class="btn btn-primary px-4 py-3" href="#!">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                    Download Resume
-                                </a>
+                                <h2 class="text-primary fw-bolder mb-0">Eixo 1: Desempenho do(a) aluno(a)</h2>
                             </div>
-                            <!-- Experience Card 1-->
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">2019 - Present</div>
-                                                <div class="small fw-bolder">Web Developer</div>
-                                                <div class="small text-muted">Stark Industries</div>
-                                                <div class="small text-muted">Los Angeles, CA</div>
+                                                <div class="text-primary fw-bolder mb-2 text-center">Avaliação formal
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="notas"
+                                                        role="switch" id="opcao1" value="0">
+                                                    <label class="form-check-label" for="opcao1">Notas abaixo do
+                                                        esperado</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="notas"
+                                                        role="switch" id="opcao2" value="1">
+                                                    <label class="form-check-label" for="opcao2">Notas baixas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="notas"
+                                                        role="switch" id="opcao3" value="2">
+                                                    <label class="form-check-label" for="opcao3">Notas dentro da média ou pouco acima</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="notas"
+                                                        role="switch" id="opcao4" value="3">
+                                                    <label class="form-check-label" for="opcao4">Notas acima da média</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="notas"
+                                                        role="switch" id="opcao5" value="4">
+                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-4">
+                                            <div id="orientação1">Avaliação formal apresenta as notas tradicionais da avaliação quantitativa desse(a) aluno(a).</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Experience Card 2-->
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">2017 - 2019</div>
-                                                <div class="small fw-bolder">SEM Specialist</div>
-                                                <div class="small text-muted">Wayne Enterprises</div>
-                                                <div class="small text-muted">Gotham City, NY</div>
+                                                <div class="text-primary fw-bolder mb-2 text-center">Rendimento
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="rendimento"
+                                                        role="switch" id="opcao1" value="0">
+                                                    <label class="form-check-label" for="opcao1">Rendimento abaixo do
+                                                        esperado</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="rendimento"
+                                                        role="switch" id="opcao2" value="1">
+                                                    <label class="form-check-label" for="opcao2">Baixo
+                                                        rendimento</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="rendimento"
+                                                        role="switch" id="opcao3" value="2">
+                                                    <label class="form-check-label" for="opcao3">Médio
+                                                        rendimento</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="rendimento"
+                                                        role="switch" id="opcao4" value="3">
+                                                    <label class="form-check-label" for="opcao4">Alto
+                                                        rendimento</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="rendimento"
+                                                        role="switch" id="opcao5" value="4">
+                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-4">
+                                            <div id="orientação1">Rendimento é relativo ao quanto que esse(a) aluno(a)
+                                                apresenta
+                                                de resultado para as atividades propostas em sala de aula e fora dela
+                                                (temas
+                                                e projetos da escola).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Interesse
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="interesse"
+                                                        role="switch" id="opcao1" value="0">
+                                                    <label class="form-check-label" for="opcao1">Não demonstra interesse nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="interesse"
+                                                        role="switch" id="opcao2" value="1">
+                                                    <label class="form-check-label" for="opcao2">Baixo
+                                                        interesse nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="interesse"
+                                                        role="switch" id="opcao3" value="2">
+                                                    <label class="form-check-label" for="opcao3">Demonstra interesse através de conversas particulares com o professor(a)</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="interesse"
+                                                        role="switch" id="opcao4" value="3">
+                                                    <label class="form-check-label" for="opcao4">Demostra alto interesse nas aulas, inclusive na frente da turma</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="interesse"
+                                                        role="switch" id="opcao5" value="4">
+                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div id="orientação1">Interesse é demonstrado em atitudes como: realizar perguntas, buscar o professor em correções de exercícios, atualizar-se de atividades no período que esteve ausente.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Cooperação
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="cooperacao"
+                                                        role="switch" id="opcao1" value="0">
+                                                    <label class="form-check-label" for="opcao1">Não demonstra cooperação nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="cooperacao"
+                                                        role="switch" id="opcao2" value="1">
+                                                    <label class="form-check-label" for="opcao2">Baixa cooperação nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="cooperacao"
+                                                        role="switch" id="opcao3" value="2">
+                                                    <label class="form-check-label" for="opcao3">Em alguns momentos demonstra maior e em outros momentos menor cooperação em aula</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="cooperacao"
+                                                        role="switch" id="opcao4" value="3">
+                                                    <label class="form-check-label" for="opcao4">Demostra alta cooperação nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="cooperacao"
+                                                        role="switch" id="opcao5" value="4">
+                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div id="orientação1">Cooperação está relacionada com a colaboração com os colegas, participação nos grupos e também com as contribuições em momentos de explicação, inclusive contribuições como a demonstração de atenção e silêncio nos momentos necessários.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Participação/Interação
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="participacao"
+                                                        role="switch" id="opcao1" value="0">
+                                                    <label class="form-check-label" for="opcao1">Não demonstra participação e interação nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="participacao"
+                                                        role="switch" id="opcao2" value="1">
+                                                    <label class="form-check-label" for="opcao2">Baixa participação ou interação nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="participacao"
+                                                        role="switch" id="opcao3" value="2">
+                                                    <label class="form-check-label" for="opcao3">Em alguns momentos demonstra maior e em outros momentos menor participação ou interação em aula</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="participacao"
+                                                        role="switch" id="opcao4" value="3">
+                                                    <label class="form-check-label" for="opcao4">Demostra alta participação e interação nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="participacao"
+                                                        role="switch" id="opcao5" value="4">
+                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div id="orientação1">Participação está relacionada com desenvolver ações que colaborem com o ambiente de aprendizagem, enquanto que interação está relacionada a postura que esse(a) aluno(a) apresenta com os seus colegas, com o(a) professor(a) e consigo mesmo. Exemplos: Colaborar com o assunto da aula, trazer curiosidades e vivências, conversar sobre o assunto da aula, apontar soluções, expor opiniões, partilhar dúvidas e formular questionamentos.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Trabalhos em grupo
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="trabalhogrupo"
+                                                        role="switch" id="opcao1" value="0">
+                                                    <label class="form-check-label" for="opcao1">Não demonstra colaboração com os colegas em trabalhos em grupo</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="trabalhogrupo"
+                                                        role="switch" id="opcao2" value="1">
+                                                    <label class="form-check-label" for="opcao2">Baixa colaboração com os colegas em trabalhos em grupo</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="trabalhogrupo"
+                                                        role="switch" id="opcao3" value="2">
+                                                    <label class="form-check-label" for="opcao3">Dependendo de quem são os colegas do grupo, apresenta maior colaboração nos trabalhos em grupo</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="trabalhogrupo"
+                                                        role="switch" id="opcao4" value="3">
+                                                    <label class="form-check-label" for="opcao4">Demostra alta colaboração nos trabalhos em grupo</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio" name="trabalhogrupo"
+                                                        role="switch" id="opcao5" value="4">
+                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div id="orientação1">Trabalhos em grupo proporcionam momentos de avaliação da sociabilidade deste aluno, além da colaboração com o grupo, permitindo ao aluno demonstrar um maior rendimento que em avaliações individuais tradicionais.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <!-- Education Section-->
+                        <!-- Aspectos atitudinais -->
                         <section>
-                            <h2 class="text-secondary fw-bolder mb-4">Education</h2>
-                            <!-- Education Card 1-->
+                            <h2 class="text-secondary fw-bolder mb-4">Eixo 2: Aspectos atitudinais</h2>
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
@@ -99,98 +324,158 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8">
+                                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet
+                                                officiis corporis sed aliquam non voluptate corrupti excepturi maxime
+                                                porro
+                                                fuga.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Education Card 2-->
+                        </section>
+                        <!-- Habilidades e Competências -->
+                        <section>
+                            <h2 class="text-warning fw-bolder mb-4">Eixo 3: Habilidades e Competências</h2>
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">2011 - 2015</div>
+                                                <div class="text-warning fw-bolder mb-2">2015 - 2017</div>
                                                 <div class="mb-2">
-                                                    <div class="small fw-bolder">ULA</div>
-                                                    <div class="small text-muted">Los Angeles, CA</div>
+                                                    <div class="small fw-bolder">Barnett College</div>
+                                                    <div class="small text-muted">Fairfield, NY</div>
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Undergraduate</div>
-                                                    <div class="small text-muted">Computer Science</div>
+                                                    <div class="small text-muted">Master's</div>
+                                                    <div class="small text-muted">Web Development</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8">
+                                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet
+                                                officiis corporis sed aliquam non voluptate corrupti excepturi maxime
+                                                porro
+                                                fuga.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <!-- Divider-->
-                        <div class="pb-5"></div>
-                        <!-- Skills Section-->
+                        <!-- Habilidades e Competências -->
                         <section>
-                            <!-- Skillset Card-->
+                            <h2 class="text-info fw-bolder mb-4">Eixo 4: Acessibilidade</h2>
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
-                                    <!-- Professional skills list-->
-                                    <div class="mb-5">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-info fw-bolder mb-2">2015 - 2017</div>
+                                                <div class="mb-2">
+                                                    <div class="small fw-bolder">Barnett College</div>
+                                                    <div class="small text-muted">Fairfield, NY</div>
+                                                </div>
+                                                <div class="fst-italic">
+                                                    <div class="small text-muted">Master's</div>
+                                                    <div class="small text-muted">Web Development</div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SEO/SEM Marketing</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Statistical Analysis</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web Development</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Network Security</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adobe Software Suite</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User Interface Design</div></div>
-                                        </div>
-                                    </div>
-                                    <!-- Languages list-->
-                                    <div class="mb-0">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Languages</span></h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Ruby</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Node.js</div></div>
+                                        <div class="col-lg-8">
+                                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet
+                                                officiis corporis sed aliquam non voluptate corrupti excepturi maxime
+                                                porro
+                                                fuga.</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
+        </form>
+        <!-- Divider-->
+        <div class="pb-5"></div>
+        <!-- Resultado-->
+        <section>
+            <div class="card shadow border-0 rounded-4 mb-5">
+                <div class="card-body p-5">
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                <i class="bi bi-card-text"></i>
+                            </div>
+                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Parecer</span>
+                            </h3>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                            <div class="col mb-4 mb-md-0">
+                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SEO/SEM
+                                    Marketing</div>
+                            </div>
+                            <div class="col mb-4 mb-md-0">
+                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+                                    Statistical Analysis</div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web
+                                    Development</div>
+                            </div>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col mb-4 mb-md-0">
+                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Network
+                                    Security</div>
+                            </div>
+                            <div class="col mb-4 mb-md-0">
+                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adobe
+                                    Software Suite</div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User
+                                    Interface Design</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2023</div></div>
-                    <div class="col-auto">
-                        <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
-                    </div>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-primary px-4 py-3" href="#!">
+                <div class="d-inline-block bi bi-download me-2"></div>
+                Baixar Parecer
+            </a>
+            <a class="btn btn-primary px-4 py-3" href="#!">
+                <div class="d-inline-block bi bi-printer me-2"></div>
+                Imprimir Parecer
+            </a>
+            <a class="btn btn-primary px-4 py-3" href="#!">
+                <div class="d-inline-block bi bi-book me-2"></div>
+                Copiar Parecer
+            </a>
+        </div>
+
+        </div>
+        </div>
+        </div>
+    </main>
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">Licença MIT - 2024</div>
+                </div>
+                <div class="col-auto">
+                    <a class="small" href="https://github.com/Uianes/geradorParecer" target="_blank">Código</a>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
