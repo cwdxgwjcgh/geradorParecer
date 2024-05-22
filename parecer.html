@@ -45,9 +45,61 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome do aluno(a) aqui" data-sb-validations="required" />
-                            <label for="name">Nome do aluno(a)</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">É obrigatório informar o nome.</div>
+                            <input class="form-control" id="nome" name="nome" type="text"
+                                placeholder="Digite o nome do aluno(a) aqui" data-sb-validations="required" />
+                            <label for="nome">Nome do aluno(a)</label>
+                            <div class="invalid-feedback" data-sb-feedback="nome:required">É obrigatório informar o
+                                nome.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select text-center" name="turma">
+                                <option selected>Turma</option>
+                                <option value="6">6º ano</option>
+                                <option value="7">7º ano</option>
+                                <option value="8">8º ano</option>
+                                <option value="9">9º ano</option>
+                            </select>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select text-center" name="disciplina">
+                                <option selected>Componente Curricular</option>
+                                <option value="Matemática">Matemática</option>
+                                <option value="Língua Portuguesa">Língua Portuguesa</option>
+                                <option value="Arte">Arte</option>
+                                <option value="Ciências">Ciências</option>
+                                <option value="Educação Física">Educação Física</option>
+                                <option value="Geografia">Geografia</option>
+                                <option value="História">História</option>
+                                <option value="Língua Inglesa">Língua Inglesa</option>
+                                <option value="Ensino Religioso">Ensino Religioso</option>
+                                <option value="Educação Ambiental">Educação Ambiental</option>
+                                <option value=">Informática Educativa0">Informática Educativa</option>
+                            </select>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select text-center" name="escola">
+                                <option selected>Escola</option>
+                                <option value="Sol Nascente">Sol Nascente</option>
+                                <option value="Antônio João">Antônio João</option>
+                                <option value="Antonio Liberato">Antonio Liberato</option>
+                                <option value="Rui Barbosa">Rui Barbosa</option>
+                                <option value="São João">São João</option>
+                            </select>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="ano" name="ano" type="number" min="2024" max="2070"
+                                placeholder="Digite o ano do parecer" data-sb-validations="required" />
+                            <label for="ano">Ano</label>
+                            <div class="invalid-feedback" data-sb-feedback="ano:required">É obrigatório informar o
+                                ano.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select text-center" name="trimestre">
+                                <option selected>Trimestre</option>
+                                <option value="1">1º trimestre</option>
+                                <option value="2">2º trimestre</option>
+                                <option value="3">3º trimestre</option>
+                            </select>
                         </div>
                         <!-- Desempenho-->
                         <section>
@@ -63,34 +115,37 @@
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="notas"
-                                                        role="switch" id="opcao1" value="0">
-                                                    <label class="form-check-label" for="opcao1">Notas abaixo do
+                                                        role="switch" id="notasopcao1" value="1">
+                                                    <label class="form-check-label" for="notasopcao1">Notas abaixo do
                                                         esperado</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="notas"
-                                                        role="switch" id="opcao2" value="1">
-                                                    <label class="form-check-label" for="opcao2">Notas baixas</label>
+                                                        role="switch" id="notasopcao2" value="2">
+                                                    <label class="form-check-label" for="notasopcao2">Notas baixas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="notas"
-                                                        role="switch" id="opcao3" value="2">
-                                                    <label class="form-check-label" for="opcao3">Notas dentro da média ou pouco acima</label>
+                                                        role="switch" id="notasopcao3" value="3">
+                                                    <label class="form-check-label" for="notasopcao3">Notas dentro da média
+                                                        ou pouco acima</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="notas"
-                                                        role="switch" id="opcao4" value="3">
-                                                    <label class="form-check-label" for="opcao4">Notas acima da média</label>
+                                                        role="switch" id="notasopcao4" value="4">
+                                                    <label class="form-check-label" for="notasopcao4">Notas acima da
+                                                        média</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="notas"
-                                                        role="switch" id="opcao5" value="4">
-                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                        role="switch" id="notasopcao5" value="0">
+                                                    <label class="form-check-label" for="notasopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div id="orientação1">Avaliação formal apresenta as notas tradicionais da avaliação quantitativa desse(a) aluno(a).</div>
+                                            <div>Avaliação formal apresenta as notas tradicionais da
+                                                avaliação quantitativa desse(a) aluno(a).</div>
                                         </div>
                                     </div>
                                 </div>
@@ -104,41 +159,40 @@
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="rendimento"
-                                                        role="switch" id="opcao1" value="0">
-                                                    <label class="form-check-label" for="opcao1">Rendimento abaixo do
+                                                        role="switch" id="rendimentoopcao1" value="1">
+                                                    <label class="form-check-label" for="rendimentoopcao1">Rendimento abaixo do
                                                         esperado</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="rendimento"
-                                                        role="switch" id="opcao2" value="1">
-                                                    <label class="form-check-label" for="opcao2">Baixo
+                                                        role="switch" id="rendimentoopcao2" value="2">
+                                                    <label class="form-check-label" for="rendimentoopcao2">Baixo
                                                         rendimento</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="rendimento"
-                                                        role="switch" id="opcao3" value="2">
-                                                    <label class="form-check-label" for="opcao3">Médio
+                                                        role="switch" id="rendimentoopcao3" value="3">
+                                                    <label class="form-check-label" for="rendimentoopcao3">Médio
                                                         rendimento</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="rendimento"
-                                                        role="switch" id="opcao4" value="3">
-                                                    <label class="form-check-label" for="opcao4">Alto
+                                                        role="switch" id="rendimentoopcao4" value="4">
+                                                    <label class="form-check-label" for="rendimentoopcao4">Alto
                                                         rendimento</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="rendimento"
-                                                        role="switch" id="opcao5" value="4">
-                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                        role="switch" id="rendimentoopcao5" value="0">
+                                                    <label class="form-check-label" for="rendimentoopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div id="orientação1">Rendimento é relativo ao quanto que esse(a) aluno(a)
+                                            <div>Rendimento é relativo ao quanto que esse(a) aluno(a)
                                                 apresenta
                                                 de resultado para as atividades propostas em sala de aula e fora dela
-                                                (temas
-                                                e projetos da escola).</div>
+                                                (projetos da escola).</div>
                                         </div>
                                     </div>
                                 </div>
@@ -152,34 +206,39 @@
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="interesse"
-                                                        role="switch" id="opcao1" value="0">
-                                                    <label class="form-check-label" for="opcao1">Não demonstra interesse nas aulas</label>
+                                                        role="switch" id="interesseopcao1" value="1">
+                                                    <label class="form-check-label" for="interesseopcao1">Não demonstra interesse
+                                                        nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="interesse"
-                                                        role="switch" id="opcao2" value="1">
-                                                    <label class="form-check-label" for="opcao2">Baixo
+                                                        role="switch" id="interesseopcao2" value="2">
+                                                    <label class="form-check-label" for="interesseopcao2">Baixo
                                                         interesse nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="interesse"
-                                                        role="switch" id="opcao3" value="2">
-                                                    <label class="form-check-label" for="opcao3">Demonstra interesse através de conversas particulares com o professor(a)</label>
+                                                        role="switch" id="interesseopcao3" value="3">
+                                                    <label class="form-check-label" for="interesseopcao3">Demonstra interesse
+                                                        através de conversas particulares com o professor(a)</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="interesse"
-                                                        role="switch" id="opcao4" value="3">
-                                                    <label class="form-check-label" for="opcao4">Demostra alto interesse nas aulas, inclusive na frente da turma</label>
+                                                        role="switch" id="interesseopcao4" value="4">
+                                                    <label class="form-check-label" for="interesseopcao4">Demostra alto interesse
+                                                        nas aulas, inclusive na frente da turma</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="interesse"
-                                                        role="switch" id="opcao5" value="4">
-                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                        role="switch" id="interesseopcao5" value="0">
+                                                    <label class="form-check-label" for="interesseopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div id="orientação1">Interesse é demonstrado em atitudes como: realizar perguntas, buscar o professor em correções de exercícios, atualizar-se de atividades no período que esteve ausente.</div>
+                                            <div>Interesse é demonstrado em atitudes como: realizar
+                                                perguntas, buscar o professor em correções de exercícios, atualizar-se
+                                                de atividades no período que esteve ausente.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,33 +252,41 @@
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="cooperacao"
-                                                        role="switch" id="opcao1" value="0">
-                                                    <label class="form-check-label" for="opcao1">Não demonstra cooperação nas aulas</label>
+                                                        role="switch" id="cooperacaoopcao1" value="1">
+                                                    <label class="form-check-label" for="cooperacaoopcao1">Não demonstra
+                                                        cooperação nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="cooperacao"
-                                                        role="switch" id="opcao2" value="1">
-                                                    <label class="form-check-label" for="opcao2">Baixa cooperação nas aulas</label>
+                                                        role="switch" id="cooperacaoopcao2" value="2">
+                                                    <label class="form-check-label" for="cooperacaoopcao2">Baixa cooperação nas
+                                                        aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="cooperacao"
-                                                        role="switch" id="opcao3" value="2">
-                                                    <label class="form-check-label" for="opcao3">Em alguns momentos demonstra maior e em outros momentos menor cooperação em aula</label>
+                                                        role="switch" id="cooperacaoopcao3" value="3">
+                                                    <label class="form-check-label" for="cooperacaoopcao3">Em alguns momentos
+                                                        demonstra maior e em outros momentos menor cooperação em
+                                                        aula</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="cooperacao"
-                                                        role="switch" id="opcao4" value="3">
-                                                    <label class="form-check-label" for="opcao4">Demostra alta cooperação nas aulas</label>
+                                                        role="switch" id="cooperacaoopcao4" value="4">
+                                                    <label class="form-check-label" for="cooperacaoopcao4">Demostra alta
+                                                        cooperação nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="cooperacao"
-                                                        role="switch" id="opcao5" value="4">
-                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                        role="switch" id="cooperacaoopcao5" value="0">
+                                                    <label class="form-check-label" for="cooperacaoopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div id="orientação1">Cooperação está relacionada com a colaboração com os colegas, participação nos grupos e também com as contribuições em momentos de explicação, inclusive contribuições como a demonstração de atenção e silêncio nos momentos necessários.</div>
+                                            <div>Cooperação está relacionada com a colaboração com os
+                                                colegas, participação nos grupos e também com as contribuições em
+                                                momentos de explicação, inclusive contribuições como a demonstração de
+                                                atenção e silêncio nos momentos necessários.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -229,37 +296,49 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2 text-center">Participação/Interação
+                                                <div class="text-primary fw-bolder mb-2 text-center">
+                                                    Participação/Interação
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="participacao"
-                                                        role="switch" id="opcao1" value="0">
-                                                    <label class="form-check-label" for="opcao1">Não demonstra participação e interação nas aulas</label>
+                                                        role="switch" id="participacaoopcao1" value="1">
+                                                    <label class="form-check-label" for="participacaoopcao1">Não demonstra
+                                                        participação e interação nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="participacao"
-                                                        role="switch" id="opcao2" value="1">
-                                                    <label class="form-check-label" for="opcao2">Baixa participação ou interação nas aulas</label>
+                                                        role="switch" id="participacaoopcao2" value="2">
+                                                    <label class="form-check-label" for="participacaoopcao2">Baixa participação ou
+                                                        interação nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="participacao"
-                                                        role="switch" id="opcao3" value="2">
-                                                    <label class="form-check-label" for="opcao3">Em alguns momentos demonstra maior e em outros momentos menor participação ou interação em aula</label>
+                                                        role="switch" id="participacaoopcao3" value="3">
+                                                    <label class="form-check-label" for="participacaoopcao3">Em alguns momentos
+                                                        demonstra maior e em outros momentos menor participação ou
+                                                        interação em aula</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="participacao"
-                                                        role="switch" id="opcao4" value="3">
-                                                    <label class="form-check-label" for="opcao4">Demostra alta participação e interação nas aulas</label>
+                                                        role="switch" id="participacaoopcao4" value="4">
+                                                    <label class="form-check-label" for="participacaoopcao4">Demostra alta
+                                                        participação e interação nas aulas</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="participacao"
-                                                        role="switch" id="opcao5" value="4">
-                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                        role="switch" id="participacaoopcao5" value="0">
+                                                    <label class="form-check-label" for="participacaoopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div id="orientação1">Participação está relacionada com desenvolver ações que colaborem com o ambiente de aprendizagem, enquanto que interação está relacionada a postura que esse(a) aluno(a) apresenta com os seus colegas, com o(a) professor(a) e consigo mesmo. Exemplos: Colaborar com o assunto da aula, trazer curiosidades e vivências, conversar sobre o assunto da aula, apontar soluções, expor opiniões, partilhar dúvidas e formular questionamentos.</div>
+                                            <div>Participação está relacionada com desenvolver ações
+                                                que colaborem com o ambiente de aprendizagem, enquanto que interação
+                                                está relacionada a postura que esse(a) aluno(a) apresenta com os seus
+                                                colegas, com o(a) professor(a) e consigo mesmo. Exemplos: Colaborar com
+                                                o assunto da aula, trazer curiosidades e vivências, conversar sobre o
+                                                assunto da aula, apontar soluções, expor opiniões, partilhar dúvidas e
+                                                formular questionamentos.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -273,33 +352,284 @@
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="trabalhogrupo"
-                                                        role="switch" id="opcao1" value="0">
-                                                    <label class="form-check-label" for="opcao1">Não demonstra colaboração com os colegas em trabalhos em grupo</label>
+                                                        role="switch" id="trabalhogrupoopcao1" value="1">
+                                                    <label class="form-check-label" for="trabalhogrupoopcao1">Não demonstra
+                                                        colaboração com os colegas em trabalhos em grupo</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="trabalhogrupo"
-                                                        role="switch" id="opcao2" value="1">
-                                                    <label class="form-check-label" for="opcao2">Baixa colaboração com os colegas em trabalhos em grupo</label>
+                                                        role="switch" id="trabalhogrupoopcao2" value="2">
+                                                    <label class="form-check-label" for="trabalhogrupoopcao2">Baixa colaboração com
+                                                        os colegas em trabalhos em grupo</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="trabalhogrupo"
-                                                        role="switch" id="opcao3" value="2">
-                                                    <label class="form-check-label" for="opcao3">Dependendo de quem são os colegas do grupo, apresenta maior colaboração nos trabalhos em grupo</label>
+                                                        role="switch" id="trabalhogrupoopcao3" value="3">
+                                                    <label class="form-check-label" for="trabalhogrupoopcao3">Dependendo de quem são
+                                                        os colegas do grupo, apresenta maior colaboração nos trabalhos
+                                                        em grupo</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="trabalhogrupo"
-                                                        role="switch" id="opcao4" value="3">
-                                                    <label class="form-check-label" for="opcao4">Demostra alta colaboração nos trabalhos em grupo</label>
+                                                        role="switch" id="trabalhogrupoopcao4" value="4">
+                                                    <label class="form-check-label" for="trabalhogrupoopcao4">Demostra alta
+                                                        colaboração nos trabalhos em grupo</label>
                                                 </div>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="radio" name="trabalhogrupo"
-                                                        role="switch" id="opcao5" value="4">
-                                                    <label class="form-check-label" for="opcao5">Não se aplica</label>
+                                                        role="switch" id="trabalhogrupoopcao5" value="0">
+                                                    <label class="form-check-label" for="trabalhogrupoopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div id="orientação1">Trabalhos em grupo proporcionam momentos de avaliação da sociabilidade deste aluno, além da colaboração com o grupo, permitindo ao aluno demonstrar um maior rendimento que em avaliações individuais tradicionais.</div>
+                                            <div>Trabalhos em grupo proporcionam momentos de avaliação
+                                                da sociabilidade deste aluno, além da colaboração com o grupo,
+                                                permitindo ao aluno demonstrar um maior rendimento que em avaliações
+                                                individuais tradicionais.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Trabalhos
+                                                    individuais
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="trabalhoindividual" role="switch" id="trabalhoindividualopcao1" value="1">
+                                                    <label class="form-check-label" for="trabalhoindividualopcao1">Não entregou a maioria
+                                                        dos trabalhos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="trabalhoindividual" role="switch" id="trabalhoindividualopcao2" value="2">
+                                                    <label class="form-check-label" for="trabalhoindividualopcao2">Baixa qualidade nos
+                                                        trabalhos individuais, de modo geral</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="trabalhoindividual" role="switch" id="trabalhoindividualopcao3" value="3">
+                                                    <label class="form-check-label" for="trabalhoindividualopcao3">Alguns trabalhos
+                                                        individuais estão dentro do esperado, outro não</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="trabalhoindividual" role="switch" id="trabalhoindividualopcao4" value="4">
+                                                    <label class="form-check-label" for="trabalhoindividualopcao4">Boa qualidade nos
+                                                        trabalhos individuais, de modo geral</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="trabalhoindividual" role="switch" id="trabalhoindividualopcao5" value="0">
+                                                    <label class="form-check-label" for="trabalhoindividualopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Trabalhos individuais incluem atividades avaliativas
+                                                fora e dentro da sala ou entrega de caderno de atividades a mais.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Temas</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="temas" role="switch" id="temasopcao1" value="1">
+                                                    <label class="form-check-label" for="temasopcao1">Não fez a maioria
+                                                        dos temas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="temas" role="switch" id="temasopcao2" value="2">
+                                                    <label class="form-check-label" for="temasopcao2">Fez poucos temas, menos da metade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="temas" role="switch" id="temasopcao3" value="3">
+                                                    <label class="form-check-label" for="temasopcao3">Fez metade dos temas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="temas" role="switch" id="temasopcao4" value="4">
+                                                    <label class="form-check-label" for="temasopcao4">Fez todos os temas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="temas" role="switch" id="temasopcao5" value="0">
+                                                    <label class="form-check-label" for="temasopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Temas são as atividades que são realizadas fora da escola.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Exercícios</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="exercicios" role="switch" id="exerciciosopcao1" value="1">
+                                                    <label class="form-check-label" for="exerciciosopcao1">Não fez a maioria
+                                                        dos exercícios em sala</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="exercicios" role="switch" id="exerciciosopcao2" value="2">
+                                                    <label class="form-check-label" for="exerciciosopcao2">Fez poucos exercícios, menos da metade, em sala</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="exercicios" role="switch" id="exerciciosopcao3" value="3">
+                                                    <label class="form-check-label" for="exerciciosopcao3">Fez metade dos exercícios em sala</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="exercicios" role="switch" id="exerciciosopcao4" value="4">
+                                                    <label class="form-check-label" for="exerciciosopcao4">Fez todos os exercícios</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="exercicios" role="switch" id="exerciciosopcao5" value="0">
+                                                    <label class="form-check-label" for="exerciciosopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Exercícios são as atividades que são realizadas na escola.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Material escolar em sala</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="material" role="switch" id="materialopcao1" value="1">
+                                                    <label class="form-check-label" for="materialopcao1">Na maioria das aulas não traz o material escolar</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="material" role="switch" id="materialopcao2" value="2">
+                                                    <label class="form-check-label" for="materialopcao2">Esquece várias vezes o material escolar</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="material" role="switch" id="materialopcao3" value="3">
+                                                    <label class="form-check-label" for="materialopcao3">Esquece o material escolar somente nos dias de avaliação</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="material" role="switch" id="materialopcao4" value="4">
+                                                    <label class="form-check-label" for="materialopcao4">Sempre traz o material escolar</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="material" role="switch" id="materialopcao5" value="0">
+                                                    <label class="form-check-label" for="materialopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Nesse aspecto vamos avaliar primeiro o(a) aluno(a) traz o material escolar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Oralidade</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="oralidade" role="switch" id="oralidadeopcao1" value="1">
+                                                    <label class="form-check-label" for="oralidadeopcao1">De modo geral não apresenta um bom desenvolvimento da oralidade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="oralidade" role="switch" id="oralidadeopcao2" value="2">
+                                                    <label class="form-check-label" for="oralidadeopcao2">Apresenta uma oralidade em desenvolvimento, apresentando de forma básica suas ideias</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="oralidade" role="switch" id="oralidadeopcao3" value="3">
+                                                    <label class="form-check-label" for="oralidadeopcao3">Desempenha, de forma oral, melhor rendimento do que em avaliações escritas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="oralidade" role="switch" id="oralidadeopcao4" value="4">
+                                                    <label class="form-check-label" for="oralidadeopcao4">Apresenta bom desenvolvimento da oralidade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="oralidade" role="switch" id="oralidadeopcao5" value="0">
+                                                    <label class="form-check-label" for="oralidadeopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Em oralidade estamos analisando a desinibição social do aluno, como ele porta-se em conversas, na construção de argumentos e perguntas, além de aspectos físicos como dicção e entonação da voz.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2 text-center">Progresso ao longo do tempo</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="progresso" role="switch" id="progressoopcao1" value="1">
+                                                    <label class="form-check-label" for="progressoopcao1">Não percebo evolução deste aluno ao longo do tempo</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="progresso" role="switch" id="progressoopcao2" value="2">
+                                                    <label class="form-check-label" for="progressoopcao2">Apresenta pequena evolução em relação ao período observado</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="progresso" role="switch" id="progressoopcao3" value="3">
+                                                    <label class="form-check-label" for="progressoopcao3">Apresenta boa evolução em relação ao período observado</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="progresso" role="switch" id="progressoopcao4" value="4">
+                                                    <label class="form-check-label" for="progressoopcao4">Apresenta grande evolução em relação ao período observado</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="progresso" role="switch" id="progressoopcao5" value="0">
+                                                    <label class="form-check-label" for="progressoopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Progressão ao longo do tempo: Como você percebe a evolução do(a) aluno(a) em relação ao início do período de trabalho com o(a) aluno(a) até o momento da escrita do parecer.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -313,23 +643,387 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">2015 - 2017</div>
-                                                <div class="mb-2">
-                                                    <div class="small fw-bolder">Barnett College</div>
-                                                    <div class="small text-muted">Fairfield, NY</div>
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Organização</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="organizacao" role="switch" id="organizacaoopcao1" value="1">
+                                                    <label class="form-check-label" for="organizacaoopcao1">Não demonstra habilidade e/ou rotina de organização</label>
                                                 </div>
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">Master's</div>
-                                                    <div class="small text-muted">Web Development</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="organizacao" role="switch" id="organizacaoopcao2" value="2">
+                                                    <label class="form-check-label" for="organizacaoopcao2">Demonstra habilidade e/ou rotina de organização em algum nível, mas baixo</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="organizacao" role="switch" id="organizacaoopcao3" value="3">
+                                                    <label class="form-check-label" for="organizacaoopcao3">Demonstra habilidade e/ou rotina de organização mediana</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="organizacao" role="switch" id="organizacaoopcao4" value="4">
+                                                    <label class="form-check-label" for="organizacaoopcao4">Demonstra boa habilidade e/ou rotina de organização</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="organizacao" role="switch" id="organizacaoopcao5" value="0">
+                                                    <label class="form-check-label" for="organizacaoopcao5">Não se aplica</label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8">
-                                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-                                                laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet
-                                                officiis corporis sed aliquam non voluptate corrupti excepturi maxime
-                                                porro
-                                                fuga.</div>
+                                        <div class="col-lg-4">
+                                            <div>Sobre organização, devemos considerar de forma geral como esse aluno atua com suas anotações (caderno e apostila), responsabilidade sobre o material compartilhado, cumprimento de sequências de passos, e principalmente, adequação a rotinas.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Cumprimento de prazos</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="prazos" role="switch" id="prazosopcao1" value="1">
+                                                    <label class="form-check-label" for="prazosopcao1">Não cumpre prazos estabelecidos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="prazos" role="switch" id="prazosopcao2" value="2">
+                                                    <label class="form-check-label" for="prazosopcao2">Poucas vezes cumpre prazos, menos da metade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="prazos" role="switch" id="prazosopcao3" value="3">
+                                                    <label class="form-check-label" for="prazosopcao3">Poucas vezes esquece algum prazo, ou seja, cumpre pelo menos metade ou mais dos prazos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="prazos" role="switch" id="prazosopcao4" value="4">
+                                                    <label class="form-check-label" for="prazosopcao4">Cumpre todos os prazos estabelecidos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="prazos" role="switch" id="prazosopcao5" value="0">
+                                                    <label class="form-check-label" for="prazosopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Sobre o cumprimento de prazos, podemos considerar as atividades, participação em projetos nos horários e dias específicos, entrega de trabalhos, entre outras atividades.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Conversas paralelas</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="conversas" role="switch" id="conversasopcao1" value="1">
+                                                    <label class="form-check-label" for="conversasopcao1">É necessário interromper as conversas paralelas do aluno várias vezes e em todas as aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="conversas" role="switch" id="conversasopcao2" value="2">
+                                                    <label class="form-check-label" for="conversasopcao2">É necessário interromper as conversas paralelas do aluno algumas vezes e em algumas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="conversas" role="switch" id="conversasopcao3" value="3">
+                                                    <label class="form-check-label" for="conversasopcao3">É necessário interromper as conversas paralelas do aluno em poucos momentos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="conversas" role="switch" id="conversasopcao4" value="4">
+                                                    <label class="form-check-label" for="conversasopcao4">É necessário interromper as conversas paralelas do aluno em raros momentos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="conversas" role="switch" id="conversasopcao5" value="0">
+                                                    <label class="form-check-label" for="conversasopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Sobre organização, devemos considerar de forma geral como esse aluno atua com suas anotações (caderno e apostila), responsabilidade sobre o material compartilhado, cumprimento de sequências de passos, e principalmente, adequação a rotinas.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Frequência e Pontualidade</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="pontualidade" role="switch" id="pontualidadeopcao1" value="1">
+                                                    <label class="form-check-label" for="pontualidadeopcao1">Muita infrequência e atrasos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="pontualidade" role="switch" id="pontualidadeopcao2" value="2">
+                                                    <label class="form-check-label" for="pontualidadeopcao2">Média frequência e pontualidade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="pontualidade" role="switch" id="pontualidadeopcao3" value="3">
+                                                    <label class="form-check-label" for="pontualidadeopcao3">Boa frequência e pontualidade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="pontualidade" role="switch" id="pontualidadeopcao4" value="4">
+                                                    <label class="form-check-label" for="pontualidadeopcao4">Ótima frequência e pontualidade</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="pontualidade" role="switch" id="pontualidadeopcao5" value="0">
+                                                    <label class="form-check-label" for="pontualidadeopcao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Frequência = Presença em sala de aula. Pontualidade = Cumprimento dos horários de aula. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Comprometimento</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="comprometimento" role="switch" id="comprometimento1" value="1">
+                                                    <label class="form-check-label" for="comprometimento1">Não demonstra comprometimento com os estudos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="comprometimento" role="switch" id="comprometimento2" value="2">
+                                                    <label class="form-check-label" for="comprometimento2">Apresenta baixo comprometimento com os estudos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="comprometimento" role="switch" id="comprometimento3" value="3">
+                                                    <label class="form-check-label" for="comprometimento3">Apresenta comprometimento médio com os estudos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="comprometimento" role="switch" id="comprometimento4" value="4">
+                                                    <label class="form-check-label" for="comprometimento4">Ótima comprometimento com os estudos</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="comprometimento" role="switch" id="comprometimento5" value="0">
+                                                    <label class="form-check-label" for="comprometimento5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Comprometimento com os estudos é a dedicação e disciplina com os estudos.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Atenção e concentração</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="atencao" role="switch" id="atencao1" value="1">
+                                                    <label class="form-check-label" for="atencao1">Não demonstra atenção e concentração nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="atencao" role="switch" id="atencao2" value="2">
+                                                    <label class="form-check-label" for="atencao2">Apresenta baixa atenção e concentração nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="atencao" role="switch" id="atencao3" value="3">
+                                                    <label class="form-check-label" for="atencao3">Apresenta média atenção e concentração nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="atencao" role="switch" id="atencao4" value="4">
+                                                    <label class="form-check-label" for="atencao4">Apresenta boa atenção e concentração nas aulas</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="atencao" role="switch" id="atencao5" value="0">
+                                                    <label class="form-check-label" for="atencao5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Atenção e concentração estão relacionadas com a habilidade de manter o foco em uma atividade.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Iniciativa</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="iniciativa" role="switch" id="iniciativa1" value="1">
+                                                    <label class="form-check-label" for="iniciativa1">Não demonstra iniciativa</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="iniciativa" role="switch" id="iniciativa2" value="2">
+                                                    <label class="form-check-label" for="iniciativa2">Apresenta baixa iniciativa</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="iniciativa" role="switch" id="iniciativa3" value="3">
+                                                    <label class="form-check-label" for="iniciativa3">Apresenta média iniciativa</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="iniciativa" role="switch" id="iniciativa4" value="4">
+                                                    <label class="form-check-label" for="iniciativa4">Apresenta boa iniciativa</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="iniciativa" role="switch" id="iniciativa5" value="0">
+                                                    <label class="form-check-label" for="iniciativa5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Iniciativa é a capacidade de buscar algo para si, como recuperar conteúdos atrasados, trabalhos pendentes, novos conteúdos, demonstrar ser ativo em seu processo de aprendizado.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Resiliência</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="resiliencia" role="switch" id="resiliencia1" value="1">
+                                                    <label class="form-check-label" for="resiliencia1">Não demonstra resiliência</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="resiliencia" role="switch" id="resiliencia2" value="2">
+                                                    <label class="form-check-label" for="resiliencia2">Apresenta baixa resiliência</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="resiliencia" role="switch" id="resiliencia3" value="3">
+                                                    <label class="form-check-label" for="resiliencia3">Apresenta média resiliência</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="resiliencia" role="switch" id="resiliencia4" value="4">
+                                                    <label class="form-check-label" for="resiliencia4">Apresenta boa resiliência</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="resiliencia" role="switch" id="resiliencia5" value="0">
+                                                    <label class="form-check-label" for="resiliencia5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Resiliência é a capacidade de adaptação em ambientes novos. No nosso caso, é a postura do aluno frente às suas dificuldades.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Respeito aos colegas</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitocolegas" role="switch" id="respeitocolegas1" value="1">
+                                                    <label class="form-check-label" for="respeitocolegas1">Demonstra conduta pouco respeitosa com os colegas na maioria das situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitocolegas" role="switch" id="respeitocolegas2" value="2">
+                                                    <label class="form-check-label" for="respeitocolegas2">Demonstra conduta pouco respeitosa com os colegas em algumas situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitocolegas" role="switch" id="respeitocolegas3" value="3">
+                                                    <label class="form-check-label" for="respeitocolegas3">Demonstra conduta respeitosa com os colegas na maioria das situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitocolegas" role="switch" id="respeitocolegas4" value="4">
+                                                    <label class="form-check-label" for="respeitocolegas4">Demonstra conduta respeitosa com os colegas em todas as situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitocolegas" role="switch" id="respeitocolegas5" value="0">
+                                                    <label class="form-check-label" for="respeitocolegas5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Demonstra consideração, valorização e tratamento respeitoso com os(as) colegas.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2 text-center">Respeito aos docentes</div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitodocentes" role="switch" id="respeitodocentes1" value="1">
+                                                    <label class="form-check-label" for="respeitodocentes1">Demonstra conduta pouco respeitosa com os docentes na maioria das situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitodocentes" role="switch" id="respeitodocentes2" value="2">
+                                                    <label class="form-check-label" for="respeitodocentes2">Demonstra conduta pouco respeitosa com os docentes em algumas situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitodocentes" role="switch" id="respeitodocentes3" value="3">
+                                                    <label class="form-check-label" for="respeitodocentes3">Demonstra conduta respeitosa com os docentes na maioria das situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitodocentes" role="switch" id="respeitodocentes4" value="4">
+                                                    <label class="form-check-label" for="respeitodocentes4">Demonstra conduta respeitosa com os docentes em todas as situações</label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="respeitodocentes" role="switch" id="respeitodocentes5" value="0">
+                                                    <label class="form-check-label" for="respeitodocentes5">Não se aplica</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>Demonstra consideração, valorização e tratamento respeitoso com os docentes.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -395,6 +1089,11 @@
                                 </div>
                             </div>
                         </section>
+                        <div class="card shadow border-0 rounded-4 mb-5 text-center">
+                            <button class="btn btn-success bi bi-send px-4 py-3" type="button" onclick="parecer()">
+                                Gerar Parecer
+                            </button>
+                        </div>
         </form>
         <!-- Divider-->
         <div class="pb-5"></div>
@@ -403,41 +1102,8 @@
             <div class="card shadow border-0 rounded-4 mb-5">
                 <div class="card-body p-5">
                     <div class="mb-5">
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                <i class="bi bi-card-text"></i>
-                            </div>
-                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Parecer</span>
-                            </h3>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                            <div class="col mb-4 mb-md-0">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SEO/SEM
-                                    Marketing</div>
-                            </div>
-                            <div class="col mb-4 mb-md-0">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                    Statistical Analysis</div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web
-                                    Development</div>
-                            </div>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-3">
-                            <div class="col mb-4 mb-md-0">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Network
-                                    Security</div>
-                            </div>
-                            <div class="col mb-4 mb-md-0">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adobe
-                                    Software Suite</div>
-                            </div>
-                            <div class="col">
-                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User
-                                    Interface Design</div>
-                            </div>
-                        </div>
+                        <h1 class="text-primary">Parecer pedagógico</h1>
+                        <p id="parecer"></p>
                     </div>
                 </div>
             </div>
